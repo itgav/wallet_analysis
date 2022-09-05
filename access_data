@@ -1,1 +1,24 @@
+# The Ethereum blockchain is downloaded, now need to figure out how to access the data.
+# From my understanding can either use Erigon's built in RPC API + methods or can use something like web3.py
 
+# Helpful links for Erigon's RPC Daemon:
+  # RPC Daemon ReadMe: https://github.com/ledgerwatch/erigon/blob/devel/cmd/rpcdaemon/README.md
+  # Using RPC Daemon to interact with node on Dev Chain: https://github.com/ledgerwatch/erigon/blob/devel/DEV_CHAIN.md
+
+# Four ways to access the Ethereum database:
+  # source: https://ledgerwatch.github.io/turbo_geth_release.html
+  # 1) JSON RPC API --> what I'm planning on using
+  # 2) LMDB Python bindings
+  # 3) Remote access w/ gRPC
+  # 4) REST API daemon (locally or remotely) --> has limited functionality atm
+
+# To run the RPC Daemon using JSON RPC API:
+# When I would have two Powershell windows open: 1 w/ the node running and 1 being the RPC Daemon trying to connect to the node
+  # I was unable to connect because it said that you can only have 1 instance using the socket
+# (9/4) It seems like the proper way to use the RPC Daemon is to not have the Erigon node running at the same time --> I was getting feedback when this was the case, but haven't fully fleshed out.
+  # However, what I'm confused by is that in the RPC Daemon ReadMe file it says "Run Locally" and then gives this code snippet:
+    # make erigon
+    # ./build/bin/erigon --datadir=<your_data_dir> --private.api.addr=localhost:9090
+    # make rpcdaemon
+    # ./build/bin/rpcdaemon --datadir=<your_data_dir> --txpool.api.addr=localhost:9090 --private.api.addr=localhost:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool
+  # Which to me, indicates that you would run the node and the RPC Daemon at the same time???
