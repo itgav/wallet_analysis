@@ -37,8 +37,13 @@
 # (9/4) It seems like the proper way to use the RPC Daemon is to not have the Erigon node running at the same time --> I was getting feedback when this was the case, but haven't fully fleshed out.
     # code: 
       # cd C:\erigon
-      # ./build/bin/rpcdaemon --datadir=A:\Erigon_Data\Erigon_Repo --txpool.api.addr=localhost:9090 --private.api.addr=localhost:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool
-        # !!!!!!!---Make sure it is----!!!!!!!!!!! the response should be something like this: "INFO [date-time] HTTP endpoint opened url=localhost:8545"
+      # ./build/bin/rpcdaemon --datadir=A:\Erigon_Repo\Erigon_Data --txpool.api.addr=localhost:9090 --private.api.addr=localhost:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool
+    # (9/5):
+      # 1) do the above in a powershell window
+      # 2) open a new powershell window and run erigon
+        # cd C:\erigon
+        # ./build/bin/erigon --datadir=A:\Erigon_Repo\Erigon_Data --private.api.addr=localhost:9090
+      # 3) open Git bash, and using Git bash am able to successfully run some of the tests listed on the RPC Daemon ReadMe
   # However, what I'm confused by is that in the RPC Daemon ReadMe file it says "Run Locally" and then gives this code snippet:
     # make erigon
     # ./build/bin/erigon --datadir=<your_data_dir> --private.api.addr=localhost:9090
