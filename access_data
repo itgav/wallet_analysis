@@ -1,18 +1,25 @@
+# 10/8: Giulio closed out previous issue. I downloaded the new repository but am still having issues. No longer seeing the "Failed to calculate fork choice" error,
+#... but am still getting the internal service error for the port mapping and am still having the same stuck pre-merge issue.
+# I built to integration tools to check on the stages:
+  # ./wmake.ps1 integration
+  # ./build/bin/integration print_stages --chain=mainnet --datadir=A:\Erigon_Repo\Erigon_Data
+# Left comment on same Github issue about status
+
 # 10/7: web.py won't work for the project because it doesn't have the capabilities of being able to iterate over all wallets and all of their transactions
   # Am having trouble syncing node with POS chain. Tried Prysm but had issues due to all the tutorials being for Linux. Was going to try Lighthouse but
-    #...Erigon release a new version today that has a consensus light client.
+  #...Erigon release a new version today that has a consensus light client.
   # Tried running erigon with the new light client and was receiving a repeat message of "No new block bodies" or something like that. This was while it was stuck at
-    #... the last POW block. --> so had trouble with the merge.
+  #... the last POW block. --> so had trouble with the merge.
   # So I tried to unwind some blocks but was unable to because I hadn't built the db-tools for the new erigon repo I downloaded. After trying to build db-tools
-    #... was receiving error: "CMake Error: The source directory "C:/erigon_22.09.02/erigon/libmdbx" does not exist."
-      #... come to find out that the "libmdbx" folder is not being created upon 
-      # Testing other versions of erigon:
-        # mkdir erigon_22.09.01
-        # cd erigon_22.09.01
-        # git clone --branch v2022.09.01 --single-branch https://github.com/ledgerwatch/erigon.git
-        # cd erigon
-          #...!!! libmdbx folder is present in the erigon folder
-        # .\wmake.ps1 erigon
+  #... was receiving error: "CMake Error: The source directory "C:/erigon_22.09.02/erigon/libmdbx" does not exist."
+  #... come to find out that the "libmdbx" folder is not being created upon 
+    # Testing other versions of erigon:
+      # mkdir erigon_22.09.01
+      # cd erigon_22.09.01
+      # git clone --branch v2022.09.01 --single-branch https://github.com/ledgerwatch/erigon.git
+      # cd erigon
+        #!!! libmdbx folder is present in the erigon folder
+      # .\wmake.ps1 erigon
         
         
 
