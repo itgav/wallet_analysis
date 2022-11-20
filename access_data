@@ -5,6 +5,8 @@
   # ./build/bin/integration print_stages --chain=mainnet --datadir=A:\Erigon_Repo\Erigon_Data
 # Left comment on same Github issue about status
 
+# 11/20: made a code space
+
 # 10/7: web.py won't work for the project because it doesn't have the capabilities of being able to iterate over all wallets and all of their transactions
   # Am having trouble syncing node with POS chain. Tried Prysm but had issues due to all the tutorials being for Linux. Was going to try Lighthouse but
   #...Erigon release a new version today that has a consensus light client.
