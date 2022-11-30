@@ -1,5 +1,4 @@
 Youtube: Exploring Chainlink VRF v2
-===
 
 - Source: https://youtu.be/rdJ5d8j1RCg
 - Main difference between v1 and v2:
