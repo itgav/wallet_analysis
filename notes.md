@@ -1,4 +1,4 @@
-# Youtube: Exploring Chainlink VRF v2
+Youtube: Exploring Chainlink VRF v2
 ===
 
 - Source: https://youtu.be/rdJ5d8j1RCg
